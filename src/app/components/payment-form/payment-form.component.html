@@ -1,0 +1,68 @@
+<ion-content class="ion-padding animate__animated animate__bounceIn" >
+  <form [formGroup]="billForm" (ngSubmit)="onSubmit()">
+
+    <ion-button fill="clear" class="close-button" (click)="closeForm()">
+      <ion-icon name="close"></ion-icon>
+    </ion-button>
+    
+    <h2>Personal information</h2>
+
+    <div class="form-group">
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input formControlName="name" placeholder="Jane"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Last name</ion-label>
+        <ion-input formControlName="lastName" placeholder="Doe"></ion-input>
+      </ion-item>
+    </div>
+
+    <div class="form-group">
+      <ion-item>
+        <ion-label position="floating">Country</ion-label>
+        <ion-input formControlName="country" placeholder="Colombia"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">City</ion-label>
+        <ion-input formControlName="city" placeholder="Cartagena"></ion-input>
+      </ion-item>
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">Address</ion-label>
+      <ion-input formControlName="address" placeholder="Los Caracoles cll 44 #26-124"></ion-input>
+    </ion-item>
+
+    <h2>Payment information</h2>
+
+    <ion-item>
+      <ion-label position="floating">Enter Your Bank Account Number</ion-label>
+      <ion-input formControlName="bank" type="text" placeholder="0123456789"></ion-input>
+    </ion-item>
+
+    <div class="form-group">
+      <ion-item>
+        <ion-label position="floating">CVC</ion-label>
+        <ion-input formControlName="cvc" type="number" placeholder="123"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Due Date</ion-label>
+        <ion-input formControlName="dueDate" type="text" placeholder="MM/YY"></ion-input>
+      </ion-item>
+    </div>
+
+    <!-- Total -->
+    <div class="total-container">
+      <span>Total</span>
+      <strong>{{Total | currency}}</strong>
+    </div>
+
+    <ion-button expand="full" type="submit" [disabled]="billForm.invalid" (click)="resume()" >
+      Pay Now
+    </ion-button>
+  </form>
+</ion-content>

@@ -1,0 +1,73 @@
+.product-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  ion-card-subtitle{
+    font-size: 16px;
+  }
+  
+
+  .image-box img {
+    width: 100%;
+    max-width: 500px; /* Imagen más grande */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(255, 165, 0, 0.5); /* Sombra naranja */
+  }
+  
+  .info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.4); /* Resplandor naranja */
+  }
+  
+  .info-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ffcc00;
+    text-shadow: 0px 2px 5px rgba(255, 165, 0, 0.7);
+  }
+  
+  .info-box p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  .description{
+    text-align: justify;
+  }
+  
+  .in-cart-button {
+    margin-top: 15px;
+    --background: #ffcc00;
+    --color: black;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.5);
+  }
+
+  .not-in-cart-button {
+    margin-top: 15px;
+    --background: rgba(255, 0, 0, 0.736);
+    --color: white;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px #ffcc00;
+  }
+
+  .back-button {
+    margin-top: 15px;
+    --background:#ff6d00;
+    --color: black;
+    font-weight: bold;
+    
+  }
+
+  p{
+    font-size: 15px;
+  }

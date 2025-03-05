@@ -1,0 +1,42 @@
+h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  ion-item {
+    --background: transparent;
+    --border-radius: 5px;
+    --padding-start: 10px;
+    --inner-padding-end: 10px;
+  }
+  
+  ion-input {
+    font-size: 1rem;
+  }
+  
+  .total-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 1.2rem;
+  }
+  
+  .total-container strong {
+    font-weight: bold;
+  }
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: black;
+  z-index: 10;
+}

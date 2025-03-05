@@ -1,0 +1,36 @@
+<ion-card>
+  <div class="info" routerLink="/view/{{product.id}}">
+    <img [src]="product.image" [alt]="product.title"  />
+
+    <ion-card-header>
+      <div class="title-container">
+        <ion-card-title>{{ product.title }}</ion-card-title>
+      </div>
+      <ion-card-subtitle>{{ product.category}}</ion-card-subtitle>
+      <ion-card-subtitle>{{ product.rating.rate }} ⭐ </ion-card-subtitle>
+      <ion-card-content>
+        USD {{ product.price| currency:'USD' }} 
+      </ion-card-content>
+  </ion-card-header>  
+  </div>
+  <div class="buttons">
+    
+    <ion-icon name="trash-outline" class="trash-icon" (click)="removeFromCart(product.id)"></ion-icon>
+    
+  
+    <div class="quantity-controls">
+      
+      <ion-button fill="outline" color="primary" (click)="increaseQuantity()">
+        +
+      </ion-button>
+
+      <ion-input type="number" [value]="quantity"  [min]="0" 
+      (ionChange)="setQuantity($event.target.value)" autocomplete="off" autocapitalize="off"></ion-input>
+
+      <ion-button fill="outline" color="danger" (click)="decreaseQuantity()">
+        -
+      </ion-button>
+      
+    </div>
+  </div>
+</ion-card>

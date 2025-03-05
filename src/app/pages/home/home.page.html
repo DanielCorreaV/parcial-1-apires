@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+<ion-content [fullscreen]="true">
+
+    
+    <ion-row>
+        
+            
+            <ion-select placeholder="pick an option" class="custom-select" (ionChange)="getProductsByCategory($event.detail.value)">
+                <ion-select-option value="All">All</ion-select-option>
+                @for (category of categories; track $index) {
+                <ion-select-option value="{{category}}">{{category}}</ion-select-option>
+              }
+            </ion-select>
+            <ion-button fill="outline" color="primary" (click)="sort('asc')">ASC</ion-button>
+            <ion-button fill="outline" color="primary" (click)="sort('desc')">DESC</ion-button>
+          
+    </ion-row>
+    
+
+    <ion-grid class="custom-grid">
+        <ion-row>
+            @for (product of products; track $index) {
+                
+                    <app-card [product]="product" routerLink="/view/{{product.id}}"></app-card>
+
+            }
+        </ion-row>
+        
+    </ion-grid>
+
+    
+</ion-content>

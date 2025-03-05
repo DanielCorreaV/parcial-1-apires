@@ -1,0 +1,27 @@
+<app-header></app-header>
+
+<ion-content [fullscreen]="true">
+    
+    <ion-grid class="custom-grid">
+        <ion-row>
+            @for (product of products; track $index) {
+                
+                    <app-shop-cart-item (reset)="resetPage($event)" [product]="product" [quantity]="product.amount ?? 1" ></app-shop-cart-item>
+   
+            }
+        </ion-row>
+        
+    </ion-grid>
+    
+</ion-content>
+@if(showF){
+    <app-payment-form class="fullscreen" [Total]="total" (close)="showF=false"></app-payment-form>
+    } 
+<div class="total">
+    <div class="total-text">
+        Total: <strong>USD {{total | currency:'USD'}}</strong>
+    </div>
+    <ion-button (click)="showForm()">
+        Checkout
+    </ion-button>
+</div>

@@ -1,0 +1,7 @@
+{
+  "name": "temu-fake",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

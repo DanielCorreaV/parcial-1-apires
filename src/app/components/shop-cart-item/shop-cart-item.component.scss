@@ -1,0 +1,90 @@
+ion-card {
+  width: 90vw; 
+  height: 250px; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+ion-card:hover {
+  transform: scale(1.05);
+}
+
+img {
+  width: 50%;
+  height: 150px; 
+  object-fit: contain;
+}
+
+ion-card-header { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 50%;
+}
+
+ion-card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+ion-card-subtitle {
+  font-size: 14px;
+  color: #666;
+  text-align: left;
+}
+
+ion-card-content {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff6d00; 
+  justify-content: left;
+}
+
+.title-container {
+  width: 60%;              
+  max-height: 45px;             
+  overflow: hidden;         
+  white-space: wrap;      
+  text-overflow: ellipsis;  
+  display: block;           
+}
+
+ion-icon.trash-icon {
+  font-size: 24px;  // Ajusta el tamaño
+  color: red;  // Color rojo para destacar
+  position:relative;
+  z-index: 20;
+  transition: transform 0.2s ease-in-out, color 0.2s;
+
+  &:hover {
+    color: darkred;  // Oscurece al pasar el cursor
+    transform: scale(1.2); // Hace un pequeño zoom
+  }
+}
+
+.info{
+  display: flex;
+  width: 90%;
+  
+}
+
+.buttons{
+  width: 10%;
+
+}
+
+ion-button{
+  width: 90%;
+  
+}
+
+

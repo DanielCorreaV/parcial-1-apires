@@ -1,0 +1,15 @@
+<ion-card>
+  <img [src]="product.image" [alt]="product.title" />
+
+  <ion-card-header>
+    <div class="title-container">
+      <ion-card-title>{{ product.title }}</ion-card-title>
+    </div>
+    <ion-card-subtitle>{{ product.category}}</ion-card-subtitle>
+    <ion-card-subtitle>{{ product.rating.rate }} ⭐ </ion-card-subtitle>
+  </ion-card-header>  
+
+  <ion-card-content>
+    USD {{ product.price| currency:'USD' }} 
+  </ion-card-content>
+</ion-card>

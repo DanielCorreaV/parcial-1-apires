@@ -1,0 +1,74 @@
+<ion-content class="ion-padding animate__animated animate__bounceIn" >
+  <div class="container">
+    
+    <h2>Personal information</h2>
+
+    <div class="form-group">
+      <ion-item>
+        <ion-label>Name</ion-label>
+        <ion-label>{{bill.name}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Last name</ion-label>
+        <ion-label>{{bill.lastName}}</ion-label>
+      </ion-item>
+    </div>
+
+    <div class="form-group">
+      <ion-item>
+        <ion-label>Country</ion-label>
+        <ion-label>{{bill.country}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>City</ion-label>
+        <ion-label>{{bill.city}}</ion-label>
+      </ion-item>
+    </div>
+
+    <ion-item>
+      <ion-label>Address</ion-label>
+      <ion-label>{{bill.address}}</ion-label>
+    </ion-item>
+
+    <h2>Payment information</h2>
+
+    <ion-item>
+      <ion-label>Enter Your Bank Account Number</ion-label>
+      <ion-label>{{bill.bank}}</ion-label>
+    </ion-item>
+
+    <div class="form-group">
+      <ion-item>
+        <ion-label>CVC</ion-label>
+        <ion-label>{{bill.cvc}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Due Date</ion-label>
+        <ion-label>{{bill.dueDate}}</ion-label>
+      </ion-item>
+    </div>
+
+    <!-- Total -->
+    <div class="total-container">
+      <span>Total: </span>
+      <strong> USD {{bill.total| currency}}</strong>
+    </div>
+  </div>
+
+  <ion-button expand="full" routerLink="/home" class="ion-margin-top">
+    Go Back
+  </ion-button>
+  
+</ion-content>
+
+@if(loading){
+  <div class="loading">
+    <ion-spinner></ion-spinner>
+    <p> processing payment...</p>
+  </div>
+}
+
+

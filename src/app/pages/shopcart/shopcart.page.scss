@@ -1,0 +1,46 @@
+ion-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+  
+.total {
+    
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    border-top: 2px solid #ddd;
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 100;
+  }
+  
+  .total-text {
+    color: #333;
+  }
+  
+  ion-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+  
+  .fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+

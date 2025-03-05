@@ -1,0 +1,39 @@
+<app-header></app-header>
+
+<ion-content class="product-view">
+  <ion-grid class="content">
+    <ion-row>
+      
+      
+        <img [src]="product.image" alt="{{ product.title }}">
+        
+      
+
+      
+      <ion-col size-md="6" size="12" class="info-box">
+        <h2>{{ product.title }}</h2>
+        <ion-card-subtitle>{{ product.category}}</ion-card-subtitle>
+        <hr>
+        <div class="description">
+          <p>{{ product.description }}</p>
+        </div>
+        <hr>
+
+        
+        <p><strong>Price:</strong> {{ product.price | currency}}</p>
+        <p><strong>Comunity rating:</strong> {{ product.rating.rate }}⭐</p>
+        <p><ion-card-subtitle><strong>voters:</strong> {{ product.rating.count }}</ion-card-subtitle></p>
+
+        
+        <ion-button [ngClass]="cartButtonClass" (click)="admCartStorage()">
+          {{ cartButtonContent }}
+        </ion-button>
+        
+        <ion-button (click)="goBack()" class="back-button">
+          <ion-icon name="arrow-back-outline"></ion-icon> Go Back
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
